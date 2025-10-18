@@ -15,7 +15,7 @@ from scripts import input_handler
 
 # ---------- CONFIG ----------
 # Get API key from environment (safer). In Colab set it in a secret or env var.
-OPENAI_API_KEY = ""
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     raise RuntimeError("Set OPENAI_API_KEY in environment before running (do NOT hardcode keys).")
 
